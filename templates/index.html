@@ -1,0 +1,39 @@
+{%extends "basic.html"%}
+
+{%block main%}
+    <main>
+        <div class="studio-info">
+            <div class="studio-info-text">
+                <div class="studio-info-title">
+                    <h1><span class="studio-name">Shifty Studio</span> - Вы отдыхаете, мы работаем!</h1>
+                </div>
+                <div class="studio-info-desc">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                        Impedit animi earum sit amet veritatis fugiat dolor ipsum ab, 
+                        sint vitae corporis dolorem ullam ipsam blanditiis maxime laborum laboriosam, 
+                        nisi odio.
+                    </p>
+                </div>
+            </div>
+            <a href="#projects"><button class="projects-btn">Перейти к проектам <i class="fa fa-gamepad" aria-hidden="true"></i></button></a>
+        </div>
+    </main>
+    <section class="projects" id="projects">
+        <div class="projects-wrapper">
+            <div class="title">
+                <h1>Наши проекты</h1>
+            </div>
+            <div class="projects-container"></div>
+        </div>
+    </section>
+
+    <section class="about-us" id="about-us">
+        <div class="about-wrapper">
+            <div class="title">
+                <h1>О нас</h1>
+            </div>
+            <div class="about-container"></div>
+        </div>
+    </section>
+{%endblock%}

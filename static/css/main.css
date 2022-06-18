@@ -1,0 +1,418 @@
+@import url(fonts.css);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    font-family: Acrom-Regular;
+}
+
+input {
+    border: 2px solid darkgrey;
+    margin: 6px;
+    background-color: ghostwhite;
+    padding: 10px;
+    width: 280px;
+    outline: none;
+    font-family: Acrom-Bold;
+}
+
+input:focus { border: 2px solid darkgrey; }
+button { border: none; background: none; font-family: Acrom-Regular; color: white; font-size: 12pt; cursor: pointer; }
+li { list-style-type: none;} 
+a { text-decoration: none; }
+
+/* Header */
+
+header {
+    background-color: #2a2a2a;
+    color: white;
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 200px 0px 200px;
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    display: table;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    color: white;
+    font-family: Acrom-ExtraBold;
+    font-size: 22pt;
+    transition: 0.4s;
+}
+
+.login-btn {
+    background-color: gold;
+    border: none;
+    color: black;
+    font-family: 'Acrom-Bold';
+    font-size: 12pt;
+    padding: 7px 30px 7px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.4s;
+    outline: none;
+}
+
+.login-btn:hover { background-color: #202020; color: white; }
+.logo a:hover { color: gold; }
+.nav-links { display: flex; align-items: center; }
+.nav-links a { color: white; transition: 0.4s; }
+.nav-links a:hover { color: gold; }
+.nav-links li { margin: 10px; }
+
+/* Main */
+
+main {
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(../images/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 565px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.studio-info {
+    margin-right: 100px;
+    color: white;
+    width: 535px;
+}
+
+.studio-info-title {
+    font-size: 13pt;
+    font-family: Acrom-Bold;
+    transition: 0.4s;
+    line-height: 1;
+}
+
+.projects-btn {
+    background-color: gold;
+    padding: 7px 30px;
+    width: 280px;
+    color: black;
+    font-family: 'Acrom-Bold';
+    height: 40px;
+    box-shadow: 2px 2px 5px gold;
+    transition: 0.4s;
+    outline: none;
+}
+
+.projects-btn:hover { background-color: #202020; color: white; box-shadow: 2px 2px 5px #202020 }
+.studio-info-title:hover { color: gold; }
+.studio-info-desc { margin: 7px 0px 7px 0px; }
+.studio-name { font-family: Acrom-ExtraBold; }
+
+.login-account {
+    color: black;
+    font-family: 'Acrom-Bold';
+    background-color: gold;
+    padding: 11px 30px 11px 30px;
+    box-shadow: 2px 2px 1px;
+    margin: 6px;
+    transition: 0.3s;
+    width: 314px;
+}
+
+.login-account:hover { color: white; background-color: #202020; }
+.login-desc { font-size: 18pt; }
+
+/* Projects */
+
+.projects {
+    display: flex;
+    justify-content: center;
+    margin: 50px 40px 50px 40px;
+}
+
+.title {
+    font-family: 'Acrom-Bold';
+    font-size: 18pt;
+    text-align: center;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 900px;
+}
+
+.project {
+    margin: 30px;
+}
+
+.project-image img {
+    transition: 0.4s;
+    max-width: 230px;
+    min-width: 230px;
+    max-height: 285px;
+    min-height: 285px;
+}
+
+.project-image img:hover {
+    transform: scale(1.1);
+}
+
+.project-info {
+    margin: 7px 0px 10px 0px;
+}
+
+.project-name {
+    font-family: 'Acrom-ExtraBold';
+    font-size: 14pt;
+    max-width: 230px;
+}
+
+.project-name a {
+    color: black;
+}
+
+.info-project-btn {
+    background-color: gold;
+    padding: 7px 30px;
+    width: 230px;
+    color: black;
+    font-family: 'Acrom-Bold';
+    height: 40px;
+    box-shadow: 2px 2px 5px gold;
+    transition: 0.4s;
+    outline: none;
+}
+
+.info-project-btn:hover { background-color: #202020; color: white; box-shadow: 2px 2px 5px #202020 }
+
+/* About-Us */
+
+.about-us {
+    display: flex;
+    justify-content: center;
+    margin: 50px 40px 50px 40px;
+}
+
+.about-container {
+    width: 900px;
+    margin-top: 30px;
+}
+
+.answer {
+    overflow: hidden;
+    height: 0;
+    transition: all 0.4s;
+    background-color: black;
+    color: white;
+    padding: 0px 0px 0px 40px;
+}
+
+.answer-text {
+    font-size: 13pt;
+}
+
+.question-btn {
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    color: black;
+    font-size: 25pt;
+    font-family: 'Acrom-Bold';
+    padding: 12px 0px 12px 10px;
+    outline: none;
+    transition: 0.4s;
+}
+
+.question-btn:hover { background-color: #202020; color: white; }
+
+/* Discord */
+
+.discord {
+    padding: 50px 150px 50px 150px;
+    background-color: rgb(18, 18, 18);
+    color: white;
+}
+
+.discord-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.discord-btn {
+    background-color: gold;
+    padding: 7px 30px;
+    width: 280px;
+    color: black;
+    font-family: 'Acrom-Bold';
+    height: 40px;
+    box-shadow: 2px 2px 5px gold;
+    transition: 0.4s;
+    outline: none;
+}
+
+.discord-title {
+    font-size: 15pt;
+    font-family: Acrom-Bold;
+    transition: 0.4s;
+    line-height: 1;
+}
+
+.discord-desc {
+    width: 450px;
+}
+
+.discord-desc {
+    margin: 7px 0px 7px 0px;
+}
+
+.discord-btn:hover { background-color: #202020; color: white; box-shadow: 2px 2px 5px #202020 }
+
+/* Login/Register */
+
+.login {
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(../images/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 565px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    width: auto;
+    height: auto;
+    background-color: whitesmoke;
+    padding: 1px 20px 30px 20px;
+    border-radius: 20px;
+}
+
+.login-text {
+    font-size: 15pt;
+    margin: 20px;
+}
+
+.login-form {
+    display: flex;
+    justify-content: center;
+}
+
+.login-in-account {
+    font-family: 'Acrom-Bold';
+    color: black;
+    outline: none;
+    width: 304px;
+    background-color: gold;
+    padding: 10px;
+    box-shadow: 2px 2px 5px gold;
+    transition: 0.4s;
+    margin: 6px;
+    height: 40px;
+}
+
+.message-error {
+    margin: 10px;
+    color: red;
+    font-family: 'Acrom-Bold';
+}
+
+.hint {
+    text-align: center;
+    margin: 10px;
+}
+
+.hint a {
+    color: blue;
+}
+
+.disabled {
+    background-color: black;
+    color: white;
+    box-shadow: none;
+    font-family: 'Acrom-Bold';
+    outline: none;
+    width: 304px;
+    padding: 10px;
+    transition: 0.4s;
+    margin: 6px;
+    height: 40px;
+}
+
+.login-in-account:hover { background-color: #202020; color: white; box-shadow: 2px 2px 5px #202020 }
+
+/* Dropdown */
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+/* Footer */
+
+footer {
+    min-width: 1184px;
+    position: relative;
+    background-color: #202020;
+    color: white;
+    text-align: center;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,29 @@
+@font-face {
+    font-family: Acrom-Regular;
+    src: url(../fonts/Acrom-Regular.ttf);
+}
+
+@font-face {
+    font-family: Acrom-Light;
+    src: url(../fonts/Acrom-Light.ttf);
+}
+
+@font-face {
+    font-family: Acrom-Thin;
+    src: url(../fonts/Acrom-Thin.ttf);
+}
+
+@font-face {
+    font-family: Acrom-Medium;
+    src: url(../fonts/Acrom-Medium.ttf);
+}
+
+@font-face {
+    font-family: Acrom-Bold;
+    src: url(../fonts/Acrom-Bold.ttf);
+}
+
+@font-face {
+    font-family: Acrom-ExtraBold;
+    src: url(../fonts/Acrom-ExtraBold.ttf);
+}

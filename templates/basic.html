@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>{{title}}</title>
+
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static//fonts/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="logo">
+                <a href="/">Shifty Studio</a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="/#projects">Проекты</a></li>
+                    <li><a href="/#about-us">О нас</a></li>
+                    {%block login_profile%}
+                        {%if 'user' in session%}
+                            <li><button class="login-btn">Мой аккаунт <i class="fa fa-user" aria-hidden="true"></i></button></li>
+                        {%else%}
+                            <li><button class="login-btn">Войти <i class="fa fa-sign-in" aria-hidden="true"></i></button></li>
+                        {%endif%}
+                    {%endblock%}
+                </ul>
+            </nav>
+        </header>
+        
+        {%block main%}
+        {%endblock%}
+
+        {%block info%}
+        {%endblock%}
+
+        <section class="discord" id="discord">
+            <div class="discord-container">
+                <div class="discord-widget">
+                    <iframe src="https://discord.com/widget?id=763037976833032212&theme=light" width="300" height="400" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+                </div>
+                <div class="discord-text">
+                    <div class="discord-title">
+                        <h2>
+                            Заходи в наш Discord
+                        </h2>
+                    </div>
+                    <div class="discord-desc">
+                        <p>
+                            Присоединяйся и играй с другими игроками. Тебя уже ждут!
+                        </p>
+                    </div>
+                    <button class="discord-btn">Перейти в Discord</button>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="foot-container">
+                <div class="copyright">
+                    <p><strong>Shifty Studio</strong> &#169;<span id="year"></span>. Все права защищены. Любое копирование контента запрещено.</p>
+                </div>
+            </div>
+        </footer>
+    
+        <template id="project-template">
+            <div class="project">
+                <div class="project-image">
+                    <img class="image" src=""> <!-- http://dummyimage.com/230x285 -->
+                </div>
+                <div class="project-info">
+                    <div class="project-name">
+                        <a class="name_project" href=""></a>
+                    </div>
+                </div>
+                <a class="info-btn-url" href=""><button class="info-project-btn">Подробнее</button></a>
+            </div>
+        </template>
+        
+        <template id="quetions-template">
+            <div class="question-answer">
+                <button class="question-btn"></button>
+                <div class="answer">
+                    <p class="answer-text"></p>
+                </div>
+            </div>
+        </template>
+    
+        <script src="/static/js/main.js"></script>
+        <script src="/static/js/accordion.js"></script>
+        <script src="/static/js/admin.js"></script>
+        <script src="/static/js/api.js"></script>
+        <script src="/static/js/scroll.js"></script>
+        <script src="/static/js/validation.js"></script>
+    </body>
+    </html>

@@ -1,0 +1,18 @@
+{%extends "basic.html"%}
+
+{%block info%}
+    <section class="info-user">
+        <div class="info-container">
+            <span class="user-info">Номер аккаунта: {{user_info_id}}</span><br>
+            <span class="user-info">Логин: {{user_info_login}}</span><br>
+            <span class="user-info">Email: {{user_info_email}}</span><br>
+            <span class="user-info">Имя: {{user_info_name}}</span><br>
+            <span class="user-info"><a href="#">Сменить пароль</a></span>
+
+            <br>
+            <br>
+
+            <a href="/logout">Выйти</a>
+        </div>
+    </section>
+{%endblock%}

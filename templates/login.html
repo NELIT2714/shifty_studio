@@ -1,0 +1,28 @@
+{%extends "basic.html"%}
+
+{%block main%}
+    <section class="login" id="login">
+        <div class="login-wrapper">
+            <div class="login-container">
+                <div class="login-text">
+                    <div class="login-title">
+                        <h1>Вход в аккаунт</h1>
+                    </div>
+                </div>
+                <div class="login-form">
+                    <form action="/user/login" method="post">
+                        <input type="text" name="login" id="login" placeholder="Логин"><br>
+                        <input type="password" name="password" id="password" placeholder="Пароль" autocomplete="off"><br>
+                        <div class="errors">
+                            <span class="message-error">{{message}}</span>
+                        </div>
+                        <button class="login-in-account" type="submit">Войти в аккаунт</button>
+                        <div class="hint">
+                            <a href="/sign-up">Создать новый аккаунт</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+{%endblock%}
