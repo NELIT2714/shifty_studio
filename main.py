@@ -1,6 +1,3 @@
-from ast import Name
-from email.policy import default
-from re import U
 from flask import Flask, render_template, jsonify, session, request
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.utils import redirect
@@ -20,32 +17,6 @@ db = SQLAlchemy(app)
 def index():
     title = 'Shifty Studio - Вы отдыхаете, мы работаем!'
     return render_template('index.html', title = title)
-
-# @app.route('/admin', methods = ['GET'])
-# def adminLogin():
-#     if 'user' in session:
-#         return render_template('admin_add_country.html')
-#     else:
-#         message = "Введите свой логин и пароль"
-#         return render_template('admin_login.html', message = message)
-
-# @app.route('/admin', methods = ['POST'])
-# def adminPanel():
-#     login = request.form['login']
-#     password = request.form['password']
-    # if Admin.query.filter_by(admin_login = login).all() == []:
-    #     message = "Вы ввели неверный логин"
-    #     return render_template('admin_login.html', message = message)
-    # else:
-    #     if Admin.query.filter_by(admin_password = password).all() == []:
-    #         message = "Вы ввели неверный пароль"
-    #         return render_template('admin_login.html', message = message)
-    #     else:
-            # if 'user' in session:
-            #     return render_template('admin_add_country.html')
-            # else:
-            #     session['user'] = login
-            #     return render_template('admin_add_country.html')
 
 @app.route('/login')
 def loginUserPage():
@@ -117,12 +88,18 @@ def logout():
     else:
         return redirect('/')
 
-@app.route('/profile')
+@app.route('/profile', methods = ['GET'])
 def myProfile():
     if 'user' in session:
         title = 'Shifty Studio - Профиль ' + session['user']
         user = Users.query.filter_by(login = session['user']).first()
-        return render_template('profile.html', title = title, user_info_id = user.id, user_info_login = user.login, user_info_email = user.email, user_info_name = user.name)
+
+        if request.environ.get('HTTP_X_FORWARDED_FOR') is None:
+            user_ip = request.environ['REMOTE_ADDR']
+        else:
+            user_ip = request.environ['HTTP_X_FORWARDED_FOR']
+
+        return render_template('profile.html', title = title, user_info_id = user.id, user_info_login = user.login, user_info_email = user.email, user_info_name = user.name, user_info_ip = user_ip)
     else:
         return redirect('/login')
 
