@@ -173,6 +173,7 @@ class AboutUs(db.Model):
         self.question = question
         self.answer = answer
 
+
 # db.create_all()
 # db.drop_all()
 
